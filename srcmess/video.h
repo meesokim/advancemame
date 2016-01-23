@@ -63,6 +63,7 @@ struct _mame_display
 
 	/* other misc information */
 	UINT8			led_state;					/* bitfield of current LED states */
+	UINT8			knocker_state;					/* bitfield of current knocker states */
 };
 /* in mamecore.h: typedef struct _mame_display mame_display; */
 

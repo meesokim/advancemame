@@ -217,8 +217,12 @@ static inline int rpl_lrint(double x)
 #define off_t off64_t /* This must be after including stdio.h */
 off64_t rpl_ftello(FILE* f);
 int rpl_fseeko(FILE* f, off64_t offset, int origin);
+#ifndef fseeko
 #define fseeko rpl_fseeko
+#endif
+#ifndef ftello
 #define ftello rpl_ftello
+#endif
 #endif
 
 #ifdef __MSDOS__
